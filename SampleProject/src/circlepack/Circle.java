@@ -9,7 +9,8 @@ public class Circle {
     }
     
     public static void main(String[] args) {
-    	Circle pizza = new Circle();
+    	Circle pizza;
+    	pizza = new Circle();
     	pizza.radius = 10;
     	pizza.name = "자바피자";
     	double area = pizza.getArea();
