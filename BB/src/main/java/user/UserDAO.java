@@ -44,7 +44,6 @@ public class UserDAO {
 	}
 	
 }
-//dsfsdf
 /*
  * package user;
  * 
