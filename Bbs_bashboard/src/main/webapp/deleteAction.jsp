@@ -12,7 +12,7 @@
 </head>
 <body>
 	<%
-		// 현재 세션 상태를 체크한다
+		// 현재 세션 상태를 체크한다 
 		String userID = null;
 		if(session.getAttribute("userID") != null){
 			userID = (String)session.getAttribute("userID");

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Baloo Bhai 2", cursive;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+/*블라인드*/
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  /* overflow: hidden; */
+}
+
+/*중요도 버튼*/
+.upanddown {
+  outline: none;
+  border: white;
+  padding: 8px 15px;
+  border-radius: 18px;
+  color: white;
+  font-size: 11px;
+  line-height: 13.81px;
+  letter-spacing: 0.5px;
+}
+
+.LOW {
+  border: white solid 3px;
+  background-color: rgb(255, 205, 42);
+}
+.LOW::before {
+  content: "LOW";
+}
+
+.NORMAL {
+  border: white solid 3px;
+  background-color: #29cc97;
+}
+.NORMAL::before {
+  content: "NORMAL";
+}
+
+.DEFAULT {
+  border: #c7c7c7 solid 3px;
+  background-color: #f0f1f7;
+  color: #000000;
+}
+.DEFAULT::before {
+  content: "DEFAULT";
+}
+
+.HIGH {
+  border: white solid 3px;
+  background-color: #f12b2c;
+}
+.HIGH::before {
+  content: "HIGH";
+}
+
+.CLEAR {
+  border: white solid 3px;
+  background-color: rgb(0, 140, 255);
+}
+.CLEAR::before {
+  content: "CLEAR";
+}
