@@ -1,5 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
+	<%@ page import="java.io.PrintWriter" %>
+	<%@ page import="dash.taskDAO" %>
+	<%@ page import="dash.tasks" %>
+	<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -73,7 +77,6 @@
 					</p>
 				</div>
 			</div>
-
 			<form class="createTask" action="writeAction.jsp" method="get">
 				<img src="./source/plus.svg" alt="" class="trigger" />
 
@@ -85,25 +88,25 @@
 
 						<h4>Explain</h4>
 						<label for="explain1"></label>
-						<textarea type="text" id="explain1" name="dashContent" rows="5"
+						<textarea id="explain1" name="dashContent" rows="5"
 							cols="58"></textarea>
 
 						<h4>Choose difficulty</h4>
 						<div class="difficulty">
 							<input type="text" id="dif_default" name=""
-								class="upanddown gray" value="DEFAULT" />
+								class="upanddown DEFAULT" value="DEFAULT"  readonly/>
 								
 							<input type="text"
-								id="dif_low" name="" class="upanddown yellow" value="LOW" />
+								id="dif_low" name="" class="upanddown LOW" value="LOW" readonly/>
 
 							<input type="text" id="dif_normal" name=""
-								class="upanddown green" value="NORMAL" />
+								class="upanddown NORMAL" value="NORMAL" readonly/>
 								
 							<input type="text"
-								id="dif_high" name="" class="upanddown red" value="HIGH" />
+								id="dif_high" name="" class="upanddown HIGH" value="HIGH" readonly/>
 
 							<input type="text" id="dif_clear" name=""
-								class="upanddown clear" value="CLEAR" />
+								class="upanddown CLEAR" value="CLEAR" readonly/>
 						</div>
 						<h4>Dead Line</h4>
 
@@ -115,86 +118,62 @@
 				</div>
 			</form>
 
-			<form action="" method="">
+			<form action="checkAction.jsp" method="get">
 				<ol class="subexp">
+					<%
+					int pageNumber = 1;
+					if (request.getParameter("pageNumber") != null) {
+						pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+					}
+					%>
+					<%
+					taskDAO taskDAO = new taskDAO();
+					ArrayList<tasks> list = taskDAO.getList(pageNumber);
+					for (int i = 0; i < list.size(); i++){;
+					%>
 					<li class="todoList">
 						<div class="todo">
 							<div>
-								<label for="task1"></label> <input type="checkbox" id="task1"
-									name="task1" />
-								<p>Car wash on 20:00</p>
+								<label for="task1"></label> 
+								<input type="checkbox" id="task1" name="dashCheck" value="false" onchange="YnCheck(this);"/>
+								<button type="submit" id="checkSubmit"></button>
+								<p><%=list.get(i).getDashTitle()%></p>
 							</div>
 							<i class="opnPop fas fa-chevron-down"></i>
-							<!-- fas fa-chevron-down -->
 							<div>
-								<i>date</i> <strong class="upanddown yellow"></strong>
+								<i id="readDate"><%=list.get(i).getDashDate().substring(0, 11)%>
+								</i> <strong class="upanddown <%= list.get(i).getDashDifficulty() %>"></strong>
 								<!-- fas fa-chevron-up -->
 								<i class="fas fa-ellipsis-v"> </i>
 								<div class="pop">
-									<p>Modify</p>
-									<p>Delete</p>
+									<input type="hidden" name="modify" id="modify" value="" />
+									<p onchange="YnCheck2(this);">Modify</p>
+									<input type="hidden" name="delete" id="delete" value="" />
+									<p onchange="YnCheck2(this);">Delete</p>
 								</div>
 							</div>
-						</div> <em>consectetur adipisicing elit. Aut minus alias ducimus ea
-							distinctio culpa quasi ratione. dolor sit amet consectetur
-							adipisicing elit. Aut minus alias ducimus ea distinctio culpa
-							quasi ratione. Perferendis, recusandae neque!</em> <em class="onDate"></em>
+						</div> <em><pre><%= list.get(i).getDashContent() %></pre></em>
 					</li>
-
-					<li class="todoList">
-						<div class="todo">
-							<div>
-								<label for="task2"></label> <input type="checkbox" id="task2"
-									name="task2" />
-								<p>Study Java</p>
-							</div>
-							<i class="opnPop fas fa-chevron-down"></i>
-							<div>
-								<i>date</i> <strong class="upanddown green"></strong> <i
-									class="fas fa-ellipsis-v"> </i>
-								<div class="pop">
-									<p>Modify</p>
-									<p>Delete</p>
-								</div>
-							</div>
-						</div> <em>ipsum dolor sit amet consectetur adipisicing elit.
-							Doloremque neque vel assumenda porro! Odit hic quasi veniam
-							similique labore mollitia error nisi magni totam alias voluptates
-							quam quos corrupti asperiores itaque quo beatae maxime ullam
-							illum, sequi minima reprehenderit quia veritatis doloremque? Esse
-							asperiores distinctio ipsam nihil! Aperiam, provident dolore.</em> <em
-						class="onDate"></em>
-					</li>
-
-					<li class="todoList">
-						<div class="todo">
-							<div>
-								<label for="task3"></label> <input type="checkbox" id="task3"
-									name="task3" checked />
-								<p>Update ticket report</p>
-							</div>
-							<i class="opnPop fas fa-chevron-down"> </i>
-							<div>
-								<i>date</i> <strong class="upanddown gray"></strong> <i
-									class="fas fa-ellipsis-v"> </i>
-								<div class="pop">
-									<p>Modify</p>
-									<p>Delete</p>
-								</div>
-							</div>
-						</div> <em>sit amet consectetur adipisicing elit. Est, quasi?
-							Dolorum saepe provident consequuntur cumque suscipit fuga quis in
-							vel ipsam nemo! Earum soluta odio quae iusto aperiam dolore
-							minima. sit amet consectetur adipisicing elit. Est, quasi?
-							Dolorum saepe provident consequuntur cumque suscipit fuga quis in
-							vel ipsam nemo! Earum soluta odio quae iusto aperiam dolore
-							minima. sit amet consectetur adipisicing elit. Est, quasi?
-							Dolorum saepe provident consequuntur cumque suscipit fuga quis in
-							vel ipsam nemo! Earum soluta odio quae iusto aperiam dolore
-							minima.</em> <em class="onDate"></em>
-					</li>
+					<%
+					}
+					%>
 				</ol>
 			</form>
+			
+			<!-- ����¡ ó������ -->
+			<% 
+				if(pageNumber != 1){
+			%>
+				<a href="dashtaskpage.jsp?pageNumber=<%= pageNumber -1 %>">����</a>
+
+			<% 
+				}if(taskDAO.nextPage(pageNumber + 1)){
+			%>
+				<a href="dashtaskpage.jsp?pageNumber=<%= pageNumber +1 %>">����</a>
+			<%
+				}
+			%>
+			
 		</div>
 	</section>
 	<script

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("sampleeditor").setAttribute("contenteditable", "true");
+        document.getElementById("sampleeditor2").setAttribute("contenteditable", "true");
+      });
+
+      function format(command, value) {
+        document.execCommand(command, false, value);
+      }
+
+      function setUrl() {
+        var url = document.getElementById("txtFormatUrl").value;
+        var sText = document.getSelection();
+        document.execCommand("insertHTML", false, '<a href="' + url + '" target="_blank">' + sText + "</a>");
+        document.getElementById("txtFormatUrl").value = "";
+      }
+    </script>
+    <script>
+      function changeFont() {
+        var myFont = document.getElementById("input-font").value;
+        document.execCommand("fontName", false, myFont);
+      }
+
+      function changeSize() {
+        var mysize = document.getElementById("fontSize").value;
+        document.execCommand("fontSize", false, mysize);
+      }
+      function changeColor() {
+        var mysize = document.getElementById("fontColor").value;
+        document.execCommand("fontColor", false, myColor);
+      }
+      function chooseColor() {
+        var mycolor = document.getElementById("myColor").value;
+        document.execCommand("foreColor", false, mycolor);
+      }
+    </script>
+    <style>
+      .editor {
+        border: solid 1px #ccc;
+        padding: 20px;
+        outline: none;
+        height: 80%;
+      }
+
+      .sample-toolbar {
+        border: solid 1px #ddd;
+        background: #0055ff;
+        padding-left: 5px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-radius: 3px;
+      }
+
+      a {
+        padding: 10px 15px;
+        background: #0055ff;
+        border: 1px solid #0000;
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 3px;
+      }
+      a:hover {
+        color: #ffff;
+        background: #000eff;
+      }
+      input {
+        padding: 10px 15px;
+        background: #0055ff;
+        border: 1px solid #0000;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 3px;
+      }
+      input:hover {
+        color: #ffff;
+        background: #000eff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sample-toolbar">
+      <a href="javascript:void(0)" draggable="false" onclick="format('bold')"><i class="fa fa-bold fa-fw"></i>old</a>
+      <a href="javascript:void(0)" draggable="false" onclick="format('italic')"
+        ><i class="fa fa-italic fa-fw"></i>talic</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('underline')"
+        ><i class="fa fa-underline"></i> nderline</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('insertunorderedlist')"
+        ><i class="fa fa-list fa-fw"></i> List 1</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('insertorderedlist')"
+        ><i class="fa fa-list-ol"></i> List 2</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('strikethrough')"
+        ><i class="fa fa-strikethrough"></i> Strikethrough</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('undo')"><i class="fa fa-undo"></i> Undo</a>
+      <a href="javascript:void(0)" draggable="false" onclick="format('redo')"><i class="fa fa-redo"></i> Redo</a>
+      <a href="javascript:void(0)" draggable="false" onclick="format('justifyLeft')">
+        <i class="fas fa-align-left"></i> Align Left</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('justifyCenter')">
+        <i class="fas fa-align-center"></i> Align Center</a
+      >
+      <a href="javascript:void(0)" draggable="false" onclick="format('justifyRight')">
+        <i class="fas fa-align-right"></i> Align Right</a
+      >
+      <select
+        id="input-font"
+        class="input"
+        title="Change Font"
+        onchange="changeFont (this);"
+        style="outline: none; height: 30px"
+      >
+        <option value="Arial">Arial</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Sans serif">Sans serif</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+      </select>
+
+      <select id="fontSize" onclick="changeSize()" title="Change Font Size" style="outline: none; height: 30px">
+        <option value selected disabled>Change Font Size</option>
+        <option value="2">3</option>
+        <option value="3">4</option>
+        <option value="4">6</option>
+        <option value="5">9</option>
+        <option value="6">10</option>
+        <option value="7">12</option>
+        <option value="8">16</option>
+      </select>
+      <input
+        draggable="false"
+        type="color"
+        onchange="chooseColor()"
+        id="myColor"
+        value="text color"
+        title="Change Text Color"
+      />
+    </div>
+
+    <div class="editor" id="sampleeditor"></div>
+  </body>
+</html>

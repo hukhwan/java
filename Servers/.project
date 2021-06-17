@@ -3,6 +3,8 @@
 	<name>Servers</name>
 	<comment></comment>
 	<projects>
+		<project>BB</project>
+		<project>BBS</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

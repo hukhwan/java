@@ -8,6 +8,7 @@ public class tasks {
 	private String dashContent;
 	private int dashAvailable;
 	private String dashDifficulty;
+	private String dashCheck;
 
 	public int getDashID() {
 		return dashID;
@@ -56,5 +57,14 @@ public class tasks {
 	public void setDashDifficulty(String dashDifficulty) {
 		this.dashDifficulty = dashDifficulty;
 	}
+	
+	public String getDashCheck() {
+		return dashCheck;
+	}
+
+	public void setDashCheck(String dashCheck) {
+		this.dashCheck = dashCheck;
+	}
+
 
 }

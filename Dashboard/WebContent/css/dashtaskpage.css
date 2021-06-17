@@ -153,9 +153,6 @@ li > div,
   font-size: 12px;
 }
 
-dl > div {
-}
-
 .databox {
   display: flex;
   flex-direction: row;
@@ -356,44 +353,44 @@ dl > div {
   letter-spacing: 0.5px;
 }
 
-.yellow {
+.LOW {
   border: white solid 3px;
   background-color: rgb(255, 205, 42);
 }
-.yellow::before {
+.LOW::before {
   content: "LOW";
 }
 
-.green {
+.NORMAL {
   border: white solid 3px;
   background-color: #29cc97;
 }
-.green::before {
+.NORMAL::before {
   content: "NORMAL";
 }
 
-.gray {
-  border: white solid 3px;
+.DEFAULT {
+  border: #c7c7c7 solid 3px;
   background-color: #f0f1f7;
-  color: #9fa2b4;
+  color: #000000;
 }
-.gray::before {
+.DEFAULT::before {
   content: "DEFAULT";
 }
 
-.red {
+.HIGH {
   border: white solid 3px;
   background-color: #f12b2c;
 }
-.red::before {
+.HIGH::before {
   content: "HIGH";
 }
 
-.clear {
+.CLEAR {
   border: white solid 3px;
   background-color: rgb(0, 140, 255);
 }
-.clear::before {
+.CLEAR::before {
   content: "CLEAR";
 }
 
@@ -511,7 +508,7 @@ ol {
 
 .todo > div:last-child {
   justify-content: flex-end;
-  min-width: 23%;
+  min-width: 28%;
 }
 
 .subexp .todoList .todo > i {
@@ -527,10 +524,15 @@ ol {
 .subexp li i {
   position: relative;
   display: block;
-  padding: 5px 20px;
+  padding: 5px 40px 5px 20px;
   color: #666b88;
-  font-size: 20px;
+  font-size: 13px;
 }
+
+#readDate{
+	padding: 5px 20px 5px 0;
+}
+
 .subexp li i:hover {
   color: #26a8ff;
 }
@@ -543,9 +545,8 @@ ol {
   position: absolute;
   max-height: 0px;
   width: max-content;
-  top: 50px;
   z-index: 3;
-  right: -40px;
+  right: -60px;
   color: #868aa0;
 }
 
@@ -583,10 +584,25 @@ ol {
   padding: 20px;
 }
 
+.createTask .makeNotice .difficulty input {
+  margin-bottom: 20px;
+  font-size: 10px;
+  text-align: center;
+  margin: 5px;
+  cursor: pointer;
+  width: 90px;
+}
+
 .createTask .makeNotice input {
   margin-bottom: 20px;
   font-size: 10px;
   text-align: center;
+  cursor: pointer;
+}
+
+.createTask .makeNotice .difficulty input:hover {
+  cursor: grab;
+  filter: brightness(0.8);
 }
 
 h4 {
@@ -604,14 +620,6 @@ h4 {
 
 .difficulty {
   margin-bottom: 30px;
-}
-
-.difficulty strong {
-  margin: 5px;
-}
-
-.difficulty strong:hover {
-  filter: brightness(0.8);
 }
 
 .makeNotice button {

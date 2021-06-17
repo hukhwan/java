@@ -51,10 +51,34 @@ function oopenAccordion() {
   }
 }
 
+//CheckBox 클릭시 체크값에 따라 DB반영
+function YnCheck(obj) {
+  var checked = obj.checked;
+  if (checked) {
+    obj.value = "true";
+  } else {
+    obj.value = "false";
+  }
+}
+
+//var checkYn = "${data.YnCheck}";
+//if (checkYn == "Y") {
+//  $("#task1").prop("checked", true);
+//} else {
+//  $("#task1").prop("checked", false);
+//}
+
+// var checkYn2 = "${data.YnCheck2}";
+// if (checkYn2 == "Y") {
+//   $("#modify").prop("checked", true);
+// } else {
+//   $("#modify").prop("checked", false);
+// }
+
 //label을 클릭시 해당input의 value = label classname
 
 var createBtn1 = document.querySelector(".difficulty #dif_default");
-createBtn1.addEventListener("click", updateBtn);
+createBtn1.addEventListener("click", updateBtn1only);
 
 var createBtn2 = document.querySelector(".difficulty #dif_low");
 createBtn2.addEventListener("click", updateBtn);
@@ -79,9 +103,20 @@ function updateBtn() {
   }
 }
 
+function updateBtn1only() {
+  if (this.getAttribute("name") == "") {
+    a();
+    this.setAttribute("name", "dashDifficulty");
+    this.style.border = "gray solid 3px";
+  } else {
+    this.setAttribute("name", "");
+    this.style.border = "#c7c7c7 solid 3px";
+  }
+}
+
 function a() {
   createBtn1.setAttribute("name", "");
-  createBtn1.style.border = "white solid 3px";
+  createBtn1.style.border = "#c7c7c7 solid 3px";
   createBtn2.setAttribute("name", "");
   createBtn2.style.border = "white solid 3px";
   createBtn3.setAttribute("name", "");
