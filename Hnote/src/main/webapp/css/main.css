@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 body {
+  height: 100vh;
   font-family: "Baloo Bhai 2", cursive;
   /* font-family: 'Roboto', sans-serif; */
 }
@@ -16,8 +17,44 @@ body {
   /* overflow: hidden; */
 }
 
+.none {
+  display: none;
+}
+
+.todoList {
+  display: block;
+}
+
+.memo {
+  display: none;
+}
+
+.active {
+  position: relative;
+  background-color: #e9e9e9;
+}
+
+/* .active:after {
+  border-top: 45px solid transparent;
+  border-left: 25px solid #0c0b0b;
+  border-right: 10px solid transparent;
+  border-bottom: 45px solid transparent;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2px;
+} */
+
+.active > i {
+  color: #0c0b0b;
+}
+
 /*중요도 버튼*/
 .upanddown {
+  text-align: center;
+  width: 85px;
+  display: block;
   outline: none;
   border: white;
   padding: 8px 15px;
@@ -47,7 +84,7 @@ body {
 .DEFAULT {
   border: #c7c7c7 solid 3px;
   background-color: #f0f1f7;
-  color: #000000;
+  color: #0c0b0b;
 }
 .DEFAULT::before {
   content: "DEFAULT";
@@ -67,4 +104,502 @@ body {
 }
 .CLEAR::before {
   content: "CLEAR";
+}
+
+.flexRo {
+  display: flex;
+}
+
+/* project */
+
+/*테마*/
+.canvas {
+  background: url("/Hnote/src/main/webapp/source/canvas.jpg");
+  background-size: 80% 130%;
+}
+
+.defaultTheme {
+  /* background-color: white; */
+  background-color: white;
+}
+
+header {
+  position: relative;
+  top: 5%;
+  margin-left: 32px;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 132px;
+  height: 80%;
+  min-height: 843px;
+  max-height: 1000px;
+  /* background-color: #0c0b0b; */
+  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
+  background-size: 50% 50%;
+  border-radius: 24px;
+  box-shadow: 20px 5px 50px #949494;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+}
+
+nav > a {
+  margin-bottom: 40px;
+}
+nav > a:hover i {
+  color: rgb(182, 182, 182);
+}
+
+nav > div {
+  width: 100%;
+}
+
+nav > div a {
+  padding: 30px 0;
+}
+
+nav i {
+  font-size: 26px;
+  color: white;
+}
+
+nav h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+nav h1 i {
+  font-size: 52px;
+}
+
+.navList {
+  position: relative;
+}
+
+.navList:hover {
+  background-color: #2e2e2e;
+}
+
+.navList:hover i {
+  color: rgb(182, 182, 182);
+}
+
+/* .navList:after {
+  border-top: 45px solid transparent;
+  border-left: 25px solid #0c0b0b;
+  border-right: 10px solid transparent;
+  border-bottom: 45px solid transparent;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -2px;
+} */
+
+.home {
+  margin-top: 55px;
+  margin-left: 236px;
+}
+
+/*hello world*/
+.home {
+  width: 100vw;
+}
+
+.homeData1 {
+  width: 50%;
+  max-width: 1306px;
+  min-width: 650px;
+  margin-right: 65px;
+}
+.homeData2 {
+  width: 40%;
+  margin-right: 80px;
+}
+
+.helloWorld {
+  background-color: rgba(255, 255, 255, 0.253);
+  position: relative;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+  padding: 36px 60px;
+  box-shadow: 0 0 10px #cccccc;
+}
+
+.helloWorld h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 57px;
+}
+.helloWorld p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.boxPosition {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+
+.localBox {
+  margin-left: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 50px 5px 15px;
+  transition: background-color 250ms ease-out;
+  border-radius: 8px 8px 0 0;
+}
+.localBox:hover {
+  box-shadow: 0 0 10px #9e9e9e;
+  background-color: #ffffff;
+}
+.localBox:hover .selection {
+  opacity: 100%;
+}
+
+.underLine {
+  position: relative;
+}
+
+.underLine::after {
+  padding-bottom: 5px;
+  position: absolute;
+  content: "";
+  display: block;
+  border-bottom: 3px solid #797979;
+  transition: width 250ms ease-out;
+  left: auto;
+  right: 0;
+  width: 0;
+}
+
+.underLine:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.localBox select {
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  background-color: transparent;
+  padding: 0 22px 0 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: gray;
+}
+
+select {
+  outline: none;
+}
+
+.localBox i {
+  cursor: pointer;
+  font-size: 13px;
+  color: rgb(71, 71, 71);
+}
+
+.localBox option {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: gray;
+  background-color: transparent;
+}
+
+.localBox .selection {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  bottom: 13px;
+  transform: translateY(50%);
+  transition: opacity 250ms ease-in-out;
+  right: 25px;
+}
+.localBox .selection i {
+  margin-left: 10px;
+  color: rgb(124, 124, 124);
+}
+
+.localBox .selection i:last-child {
+  transform: rotate(-45deg);
+  transition: transform 250ms ease-in-out;
+}
+
+.localBox .selection i:last-child:hover {
+  transform: rotate(0deg);
+  color: #0c0b0b;
+}
+
+.homeData1 .preview,
+.homeData1 .banner {
+  align-items: center;
+}
+
+.homeData1 .preview ul {
+  height: 400px;
+  overflow: auto;
+  margin-bottom: 50px;
+}
+
+.homeData1 .preview ul::-webkit-scrollbar {
+  width: 15px;
+}
+
+.homeData1 .preview ul::-webkit-scrollbar-thumb {
+  background-color: #2f35425e;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.homeData1 .preview ul::-webkit-scrollbar-thumb:hover {
+  background-color: #2f3542b6;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.homeData1 .preview ul::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.089);
+  border-radius: 10px;
+}
+.homeData1 .preview ul::-webkit-scrollbar-track:hover {
+  background-color: rgba(128, 128, 128, 0.26);
+  border-radius: 10px;
+}
+
+.homeData1 .preview > h2 {
+  font-size: 24px;
+  line-height: 38.26px;
+  font-weight: 700;
+  color: #0c0b0b;
+}
+
+.homeData1 .preview > ol li {
+  font-size: 16px;
+  line-height: 25.5px;
+  font-weight: 700;
+  color: #0c0b0b;
+  opacity: 0.3;
+  cursor: default;
+}
+.homeData1 .preview > ol li:hover {
+  opacity: 0.8;
+}
+
+.homeData1 .preview > ol > .open {
+  opacity: 1;
+}
+.homeData1 .preview > ol > .open:hover {
+  opacity: 1;
+}
+
+.homeData1 .banner {
+  margin-bottom: 40px;
+}
+
+.homeData1 .banner > i {
+  font-size: 40px;
+  color: #424242;
+  margin: 15px;
+}
+.homeData1 .banner > i:hover {
+  color: #0c0b0b;
+}
+.homeData1 .banner > i:active {
+  color: #686868;
+}
+
+.homeData1 .banner .bn {
+  background-color: rgba(255, 255, 255, 0.479);
+  position: relative;
+  display: flex;
+  box-shadow: 0 0 30px #cccccc;
+  height: 100px;
+  padding: 19px 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/*프리뷰*/
+
+.homeData1 .preview .doList {
+  max-width: 750px;
+  position: relative;
+  margin: 20px;
+  margin-left: 0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.479);
+  cursor: unset;
+  box-shadow: 0 0 30px #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px 0 22px;
+}
+
+.homeData1 .preview .doList > div {
+  margin: 0 40px;
+}
+
+.homeData1 .preview .doList i {
+  display: block;
+  padding: 25px 1px 25px 0;
+  cursor: default;
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.homeData1 .preview .doList i:hover {
+  font-size: 16px;
+}
+
+.homeData1 .preview .doList > i:hover {
+  font-size: 18px;
+  margin-right: 18px;
+}
+.homeData1 .preview .doList > i:active ~ p {
+  filter: brightness(0.7);
+}
+
+.homeData1 .preview ol li {
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+}
+.homeData1 .preview ol li:first-child {
+  padding-left: 0;
+}
+
+.homeData1 .preview .doList > .fas {
+  margin: 19px 0;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*투두리스트 종류*/
+.homeData1 .preview .doList > .fa-briefcase {
+  background-color: #82f5cd;
+  border: #5e8378 solid 3px;
+  color: #374e47;
+}
+
+.homeData1 .preview .doList > .fa-book {
+  background-color: #f8dc7e;
+  border: #97916c solid 3px;
+  color: #4e4b37;
+}
+
+.homeData1 .preview .doList > .fa-user {
+  background-color: #a5b3fc;
+  border: #97916c solid 3px;
+  color: #4e4b37;
+}
+
+/*투두리스트 종류 end*/
+
+.homeData1 .preview .doList .liH {
+  width: 250px;
+}
+
+.homeData1 .preview .doList .liH > p {
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.23px;
+  letter-spacing: 0;
+}
+
+.homeData1 .preview .doList .time {
+  margin-right: 20px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 15.23px;
+  letter-spacing: 0;
+  font-weight: 500;
+  width: 110px;
+}
+
+.homeData1 .preview .doList button {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  padding: 0;
+  text-align: center;
+  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
+  background-size: 50% 50%;
+  opacity: 0.8;
+  border-radius: 0 8px 8px 0;
+}
+.homeData1 .preview .doList button i {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+.homeData1 .preview .doList button:hover {
+  filter: brightness(2);
+}
+
+.homeData1 .preview .doList button:active {
+  filter: brightness(0.5);
+}
+
+/*퍼센트 마스크*/
+/* .homeData1 .preview .doList .percent {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(57, 166, 255);
+  border: rgb(24, 105, 255) solid 2px;
+  border-radius: 12px;
+  padding: 3px 0;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.percentMask {
+  background-color: white;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 30px;
+  height: 10px;
+} */
+
+/*모바일*/
+@media screen and (max-height: 920px) {
+  nav {
+    width: 90px;
+    min-height: unset;
+  }
+
+  nav h1 i {
+    font-size: 26px;
+  }
+  nav i {
+    font-size: 18px;
+  }
+  nav > div a {
+    padding: 15px 0;
+  }
+  .home {
+    margin-left: 150px;
+  }
 }

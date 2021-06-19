@@ -1,0 +1,51 @@
+
+/* Clip text element */
+.clip-text {
+  position: relative;
+
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+  position: absolute;
+  content: "";
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: 0.125em;
+  right: 0.125em;
+  bottom: 0.125em;
+  left: 0.125em;
+  /* background-color: #000; */
+  background: url("./source/canvas.jpg");
+  background-size: 70% 50%;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+  background-position: -0.75em 0;
+}
+
+.clip-text--no-textzone:after {
+  content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+  -webkit-background-size: 50% 50%;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+}
+
+.clip-text_one {
+  /* background-color: white; */
+  background-image: url(./source/watercolor_font.jpg);
+  background-size: 15% 80%;
+}

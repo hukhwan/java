@@ -5,89 +5,223 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/cssReset.css" />
-    <link rel="stylesheet" href="" />
-    <script src="" defer></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./test.css" />
+    <script src="./script/main.js" defer></script>
     <script src="https://kit.fontawesome.com/f968a989c6.js" crossorigin="anonymous"></script>
     <link rel="head icon" href="./source/hotjar-brands.svg" type="png icon" />
     <title>H1note</title>
   </head>
-  <body>
+  <body class="flexRo canvas">
     <header>
       <nav>
         <h1>
           <a href="./main.html">
             <i class="fas fa-cat"></i>
-            <em class="blind">H1</em>
+            <em class="blind">Hnote</em>
           </a>
         </h1>
         <div>
-          <a href="#"><i class="fas fa-home"></i></a>
-          <a href="#"><i class="fas fa-list-alt"></i></a>
-          <a href="#"><i class="fas fa-memory"></i></a>
-          <a href="#"><i class="fas fa-code"></i></a>
-          <a href="#"><i class="fas fa-calendar"></i></a>
-          <a href="#"><i class="fas fa-chart-pie"></i></a>
+          <a href="#" class="active">
+            <i class="fas fa-home">
+              <em class="blind">home</em>
+            </i>
+          </a>
+          <a href="#" class="navList">
+            <i class="fas fa-list-alt">
+              <em class="blind">todo list</em>
+            </i>
+          </a>
+          <a href="#" class="navList">
+            <i class="fas fa-memory">
+              <em class="blind">memo</em>
+            </i>
+          </a>
+          <a href="#" class="navList">
+            <i class="fas fa-code">
+              <em class="blind">study</em>
+            </i>
+          </a>
+          <a href="#" class="navList">
+            <i class="fas fa-calendar">
+              <em class="blind">calendar</em>
+            </i>
+          </a>
+          <a href="#" class="navList"
+            ><i class="fas fa-chart-pie">
+              <em class="blind">chart</em>
+            </i>
+          </a>
         </div>
-        <a href="#"><em class="fas fa-sign-out-alt"></em></a>
+
+        <a href="#">
+          <i class="fas fa-sign-out-alt">
+            <em class="blind">log out</em>
+          </i>
+        </a>
       </nav>
     </header>
-    <section class="home">
-      <div>
-        <form class="helloWorld" method="POST" action="weatherAction.jsp">
+
+    <section class="home flexRo">
+      <!-- 날씨 기상청api 필요 -->
+      <div class="homeData1">
+        <form class="helloWorld flexRo" method="POST" action="weatherAction.jsp">
           <div>
-            <h2>Hello <em>Josh</em>!</h2>
-            <p>It’s good to see you again.</p>
+            <h2>Hello <em class="userID">Josh</em>!</h2>
+            <p class="weatherComment">It’s good to see you again.</p>
           </div>
-          <div>
-            <label for="weather">local</label>
-            <input type="text" value="seoul" name="weather" id="weather" />
-            <img src="" alt="" />
+          <div class="boxPosition">
+            <div class="localBox underLine">
+              <label for="weather">local</label>
+              <select name="weather" id="weather">
+                <option value="seoul">Seoul</option>
+                <option value="seoul">Incheon</option>
+                <option value="seoul">Daejeon</option>
+              </select>
+              <div class="selection">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
           </div>
         </form>
 
-        <div class="banner">
+        <!-- 배너 -->
+        <div class="banner flexRo">
           <ul>
-            <li>
-              <a href=""></a>
+            <li class="bn1">
+              <a href="#" class="bn">
+                <h2>Banner</h2>
+                <!-- <p class="fas fa-briefcase"></p>
+                <p class="fas fa-user-shield"></p>
+                <p class="fas fa-book"></p>
+                <div class="bnH">
+                  <h2>Learn Figma</h2>
+                  <p>by Christopher Morgan</p>
+                </div>
+                <div>
+                  <div>87%</div>
+                  <em>21-06-17</em>
+                  <em>18:00</em>
+                </div>
+                <strong class="upanddown CLEAR">Clear</strong>
+                <button>Complete</button> -->
+              </a>
             </li>
           </ul>
-          <i class="fas fa-arrow-circle-right"></i>
-          <i class="fas fa-arrow-circle-left"></i>
-          <i class="fas fa-pause-circle"></i>
-          <!-- <div><i class="fas fa-play-circle"></i></div> -->
+          <i class="far fa-arrow-alt-circle-left"></i>
+          <i class="far fa-arrow-alt-circle-right"></i>
         </div>
 
+        <!-- 프리뷰 -->
         <div class="preview">
           <h2>Preview</h2>
-          <ul>
-            <li>Todo List</li>
-            <li>Memo</li>
+          <ol class="flexRo">
+            <li class="todoListH open" onclick="openCurrAccordion();">Todo List</li>
+            <li class="memoH" onclick="openCurrAccordion2();">Memo</li>
             <li>Calendar</li>
-          </ul>
+          </ol>
 
           <!-- TodoList클릭시 -->
           <ul class="todoList">
-            <li>
+            <li class="doList li1">
               <i class="far fa-grip-lines"></i>
               <p class="fas fa-briefcase"></p>
-              <!-- <p class="fas fa-user-shield"></p>
+              <!-- <p class="fas fa-briefcase"></p> -->
+              <!-- <p class="fas fa-user"></p>
               <p class="fas fa-book"></p> -->
-              <div>
+              <div class="liH">
                 <h2>Learn Figma</h2>
                 <p>by Christopher Morgan</p>
               </div>
-              <div>
-                <div>87%</div>
-                <em>21-06-17</em>
-                <em>18:00</em>
+              <p class="time">
+                <em>~ 21-06-17 18:00</em>
+              </p>
+              <strong class="upanddown CLEAR"></strong>
+              <button>
+                <i class="fas fa-check"></i>
+              </button>
+            </li>
+
+            <li class="doList li1">
+              <i class="far fa-grip-lines"></i>
+              <p class="fas fa-book"></p>
+              <!-- <p class="fas fa-briefcase"></p> -->
+              <!-- <p class="fas fa-user"></p>
+              <p class="fas fa-book"></p> -->
+              <div class="liH">
+                <h2>Learn Figma</h2>
+                <p>by Christopher Morgan</p>
               </div>
-              <strong class="upanddown CLEAR">Clear</strong>
-              <button>Complete</button>
+              <p class="time">
+                <em>~ 21-06-17 18:00</em>
+              </p>
+              <strong class="upanddown DEFAULT"></strong>
+              <button>
+                <i class="fas fa-check"></i>
+              </button>
+            </li>
+
+            <li class="doList li1">
+              <i class="far fa-grip-lines"></i>
+              <p class="fas fa-user"></p>
+              <!-- <p class="fas fa-briefcase"></p> -->
+              <!-- <p class="fas fa-user"></p>
+              <p class="fas fa-book"></p> -->
+              <div class="liH">
+                <h2>Learn Figma</h2>
+                <p>by Christopher Morgan</p>
+              </div>
+              <p class="time">
+                <em>~ 21-06-17 18:00</em>
+              </p>
+              <strong class="upanddown HIGH"></strong>
+              <button>
+                <i class="fas fa-check"></i>
+              </button>
+            </li>
+
+            <li class="doList li1">
+              <i class="far fa-grip-lines"></i>
+              <p class="fas fa-book"></p>
+              <!-- <p class="fas fa-briefcase"></p> -->
+              <!-- <p class="fas fa-user"></p>
+              <p class="fas fa-book"></p> -->
+              <div class="liH">
+                <h2>Learn Figma</h2>
+                <p>by Christopher Morgan</p>
+              </div>
+              <p class="time">
+                <em>~ 21-06-17 18:00</em>
+              </p>
+              <strong class="upanddown NORMAL"></strong>
+              <button>
+                <i class="fas fa-check"></i>
+              </button>
+            </li>
+
+            <li class="doList li1">
+              <i class="far fa-grip-lines"></i>
+              <p class="fas fa-user"></p>
+              <!-- <p class="fas fa-briefcase"></p> -->
+              <!-- <p class="fas fa-user"></p>
+              <p class="fas fa-book"></p> -->
+              <div class="liH">
+                <h2>Learn Figma</h2>
+                <p>by Christopher Morgan</p>
+              </div>
+              <p class="time">
+                <em>~ 21-06-17 18:00</em>
+              </p>
+              <strong class="upanddown LOW"></strong>
+              <button>
+                <i class="fas fa-check"></i>
+              </button>
             </li>
           </ul>
 
           <!-- 메모 클릭시 -->
-          <ul class="memo blind">
+          <ul class="memo">
             <li>
               <div>
                 <i class="far fa-grip-lines"></i>
@@ -105,7 +239,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="homeData2">
         <div>
           <form action="" method="POST">
             <div>
@@ -181,14 +315,52 @@
         </div>
       </div>
     </section>
+    <!-- <script>
+      $.ajax({
+        type: "GET",
+        url: "https://wakatime.com/share/@99de18c9-878b-48c1-a485-b84914ca893c/d317dd8a-6387-457d-a08d-7f85055ccf52.json",
+        dataType: "jsonp",
+        success: function (response) {
+          console.log(response.data);
+        },
+      });
+
+      {
+        "data"[
+          ({
+            color: "#e44b23",
+            name: "HTML",
+            percent: 57.16,
+          },
+          {
+            color: "#f1e05a",
+            name: "JavaScript",
+            percent: 26.31,
+          },
+          {
+            color: "#b07219",
+            name: "Java",
+            percent: 11.98,
+          },
+          {
+            color: "#563d7c",
+            name: "CSS",
+            percent: 4.52,
+          },
+          {
+            color: "#16ce40",
+            name: "Git Config",
+            percent: 0.02,
+          },
+          {
+            color: "#1f9aef",
+            name: "Other",
+            percent: 0.01,
+          })
+        ];
+      }
+    </script> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </body>
 </html>
-
-<!-- 알림
-
-돋보기
-<i class="fas fa-search"></i>
-프로필
-<i class="fas fa-user-alt"></i> -->
