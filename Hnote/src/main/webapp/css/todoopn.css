@@ -1,0 +1,333 @@
+.subexp .createTask {
+  margin: auto;
+  width: max-content;
+  padding: 10px 30px 10px 14px;
+  cursor: pointer;
+}
+
+.subexp .createTask img {
+  width: 30px;
+}
+.subexp .createTask img:hover {
+  opacity: 80%;
+}
+
+.subexp li {
+  border-bottom: #dcdce0 solid 1px;
+  z-index: 1;
+}
+
+.subexp li p {
+  font-weight: 700;
+}
+
+.subexp li input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #bcbcbc;
+  cursor: pointer;
+}
+
+.subexp li:hover {
+  background-color: hsl(161, 100%, 96%);
+}
+
+.subexp li > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subexp li > div > div {
+  display: flex;
+  align-items: center;
+}
+
+.subexp .todoList em {
+  display: block;
+  margin: 0 30px 10px;
+  font-weight: 500;
+  font-style: normal;
+  color: #525775;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease-in-out;
+  margin-top: 20px;
+}
+
+.todo > div:first-child {
+  min-width: 30%;
+}
+
+.todo > div:last-child {
+  justify-content: flex-end;
+  min-width: 23%;
+}
+
+.subexp .todoList .todo > i {
+  display: block;
+  padding: 10px 0 10px 195px;
+  width: 50%;
+}
+
+.subexplain .subexp .open em {
+  max-height: 0px;
+}
+
+.subexp li i {
+  position: relative;
+  display: block;
+  padding: 5px 20px;
+  color: #666b88;
+  font-size: 20px;
+}
+.subexp li i:hover {
+  color: #26a8ff;
+}
+
+.hideText {
+  display: none;
+}
+
+.subexp .pop {
+  position: absolute;
+  max-height: 0px;
+  width: max-content;
+  top: 50px;
+  z-index: 3;
+  right: -40px;
+  color: #868aa0;
+}
+
+.pop p {
+  font-size: 0;
+}
+
+.oopen .pop {
+  background-color: #eeeeee;
+  border: #e2e2e2 solid 2px;
+  padding: 16px;
+  padding-left: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.oopen .pop p {
+  font-size: 15px;
+  padding-bottom: 16px;
+}
+
+.subexp .pop p:hover {
+  color: black;
+}
+
+.subexp .pop p:first-child {
+  margin-bottom: 20px;
+}
+
+.createTask {
+  position: relative;
+  text-align: center;
+}
+
+.createTask .makeNotice {
+  padding: 20px;
+}
+
+.createTask .makeNotice input {
+  margin-bottom: 20px;
+  font-size: 10px;
+  text-align: center;
+  margin: 5px;
+  cursor: grab;
+}
+
+.createTask .makeNotice #work {
+  font-size: 15px;
+}
+
+.createTask .makeNotice input:hover {
+  cursor: grab;
+  filter: brightness(0.8);
+}
+
+h4 {
+  width: 500px;
+  padding: 5px 0;
+  background-color: #e6f0ff;
+  margin: 15px;
+}
+#explain1 {
+  border-color: white;
+  outline: none;
+  background-color: #f7faff;
+  padding: 20px;
+}
+
+.difficulty {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.makeNotice button {
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #3f99ff;
+  border: #1f7fee solid 1px;
+  color: white;
+}
+
+.makeNotice button:hover {
+  color: #31323a;
+  background-color: #ffffff;
+  border: #3f99ff solid 1px;
+}
+
+.createTask .maker {
+  display: block;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 250ms ease-in-out;
+}
+
+.createTask .maker .makeNotice > input {
+  font-size: 13px;
+}
+
+.pen .maker {
+  box-shadow: #c5c5c5 0 5px 20px;
+  border: #e0e0e0 solid 1px;
+}
+
+.modify {
+  position: absolute;
+  right: -85px;
+  color: #31323a;
+  font-size: 30px;
+}
+.modify:hover {
+  color: #838383;
+}
+
+.modify p {
+  font-size: 13px;
+}
+.doList .modify .log {
+  top: 40px;
+  right: -30px;
+}
+
+.homedata {
+  margin-right: 110px;
+}
+
+.detailBox {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.todoDetail {
+  background-color: #ffffff54;
+  padding: 15px 35px 5px;
+  border-radius: 12px;
+  margin: 10px;
+  text-align: center;
+  color: rgb(59, 59, 59);
+  box-shadow: 0 0 10px #cccccc;
+}
+
+.todoDetail p {
+  font-size: 54px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.difBtn {
+  margin-top: 15px;
+  box-shadow: 0 0 10px #cccccc;
+  width: 75%;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.difBtn strong {
+  margin: 10px;
+}
+
+.upanddown3 {
+  text-align: center;
+  width: 140px;
+  display: block;
+  outline: none;
+  border: white;
+  padding: 8px 15px;
+  border-radius: 18px;
+  color: white;
+  font-size: 11px;
+  line-height: 13.81px;
+  letter-spacing: 0.5px;
+}
+.createTask .makeNotice .upanddown4 {
+  margin: 0 15px;
+}
+.upanddown4 {
+  text-align: center;
+  width: 60px;
+  display: block;
+  outline: none;
+  border: white;
+  padding: 5px 10px;
+  border-radius: 18px;
+  color: white;
+  font-size: 11px;
+  line-height: 13.81px;
+  letter-spacing: 0.5px;
+}
+
+.DEFAULT {
+  border: #c7c7c7 solid 3px;
+  background-color: #f0f1f7;
+  color: #0c0b0b;
+}
+.categori {
+  display: flex;
+  justify-content: center;
+}
+.works {
+  border: #5e8378 solid 3px;
+  background-color: #82f5cd;
+  color: #5e8378;
+  font-weight: 700;
+}
+
+.study {
+  border: #97916c solid 3px;
+  background-color: #f8dc7e;
+  color: #4e4b37;
+  font-weight: 700;
+}
+
+.private {
+  border: #97916c solid 3px;
+  background-color: #a5b3fc;
+  color: #4e4b37;
+  font-weight: 700;
+}
+
+.timeStamp .myCalendar p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  padding: 5px;
+  color: black;
+}

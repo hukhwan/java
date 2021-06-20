@@ -22,6 +22,7 @@ body {
 }
 
 .todoList {
+  position: relative;
   display: block;
 }
 
@@ -54,6 +55,19 @@ body {
 .upanddown {
   text-align: center;
   width: 85px;
+  display: block;
+  outline: none;
+  border: white;
+  padding: 8px 15px;
+  border-radius: 18px;
+  color: white;
+  font-size: 11px;
+  line-height: 13.81px;
+  letter-spacing: 0.5px;
+}
+.upanddown2 {
+  text-align: center;
+  width: 50px;
   display: block;
   outline: none;
   border: white;
@@ -372,9 +386,15 @@ select {
   align-items: center;
 }
 
+.preview ol {
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+.preview ol h3 {
+  font-size: 25px;
+}
+
 .preview ul {
-  height: 400px;
-  overflow: auto;
   margin-bottom: 50px;
 }
 
@@ -412,15 +432,11 @@ select {
 }
 
 .preview > ol li {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 25.5px;
   font-weight: 700;
-  color: #0c0b0b;
-  opacity: 0.3;
+  color: #414141;
   cursor: default;
-}
-.preview > ol li:hover {
-  opacity: 0.8;
 }
 
 .preview > ol > .open {
@@ -806,7 +822,7 @@ select {
 
 .homeData2 .timeStamp article {
   width: 35%;
-  min-width: 240px;
+  min-width: 230px;
   padding: 20px 20px 0;
   box-shadow: 0 0 30px #cccccc;
   border-radius: 14px;
@@ -895,7 +911,7 @@ select {
   box-shadow: 0 0 30px #7a7a7a;
 }
 
-/*easy option*/
+
 
 /*모바일*/
 @media screen and (max-height: 920px) {

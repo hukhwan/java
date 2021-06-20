@@ -12,7 +12,7 @@
     <link rel="head icon" href="./source/hotjar-brands.svg" type="png icon" />
     <title>H1note</title>
   </head>
-  <body class="flexRo canvas" onload="time()">
+  <body class="flexRo canvas" onload="time(),time2()">
     <header>
       <nav>
         <h1>
@@ -22,12 +22,12 @@
           </a>
         </h1>
         <div>
-          <a href="#" class="active">
+          <a href="./main.html" class="active">
             <i class="fas fa-home">
               <em class="blind">home</em>
             </i>
           </a>
-          <a href="#" class="navList">
+          <a href="./todoList.html" class="navList">
             <i class="fas fa-list-alt">
               <em class="blind">todo list</em>
             </i>
@@ -97,7 +97,7 @@
           <ul>
             <li class="bn1">
               <a href="#" class="bn">
-                <h2>Banner</h2>
+                <h2>Banner<br />Preparing</h2>
                 <!-- <p class="fas fa-briefcase"></p>
                 <p class="fas fa-user-shield"></p>
                 <p class="fas fa-book"></p>
@@ -129,7 +129,7 @@
           </ol>
 
           <!-- TodoList클릭시 -->
-          <ul class="todoList">
+          <ul class="todoList" id="sortable">
             <li class="doList li1">
               <i class="far fa-grip-lines"></i>
               <p class="fas fa-briefcase"></p>
@@ -371,24 +371,28 @@
           </div>
         </div>
 
-        <div class="timeStamp">
+        <ul class="timeStamp" id="sortable2">
           <!-- 달력/시계 -->
-          <article class="myCalendar">
-            <h3>2021-6-20</h3>
-            <div>
-              <p id="now"></p>
-            </div>
-          </article>
+          <li>
+            <article class="myCalendar">
+              <h3 id="now2"></h3>
+              <div>
+                <p id="now"></p>
+              </div>
+            </article>
+          </li>
 
           <!-- write -->
-          <article>
-            <h3>today <em>7</em> write!</h3>
-            <div class="myWrite">
-              <p>todo<br /><em>5</em></p>
-              <p>memo<br /><em>2</em></p>
-            </div>
-          </article>
-        </div>
+          <li>
+            <article>
+              <h3>today <em>7</em> write!</h3>
+              <div class="myWrite">
+                <p>todo<br /><em>5</em></p>
+                <p>memo<br /><em>2</em></p>
+              </div>
+            </article>
+          </li>
+        </ul>
 
         <div class="preview">
           <h2>Your statistics</h2>
@@ -421,51 +425,9 @@
         </div>
       </div>
     </section>
-    <!-- <script>
-      $.ajax({
-        type: "GET",
-        url: "https://wakatime.com/share/@99de18c9-878b-48c1-a485-b84914ca893c/d317dd8a-6387-457d-a08d-7f85055ccf52.json",
-        dataType: "jsonp",
-        success: function (response) {
-          console.log(response.data);
-        },
-      });
 
-      {
-        "data"[
-          ({
-            color: "#e44b23",
-            name: "HTML",
-            percent: 57.16,
-          },
-          {
-            color: "#f1e05a",
-            name: "JavaScript",
-            percent: 26.31,
-          },
-          {
-            color: "#b07219",
-            name: "Java",
-            percent: 11.98,
-          },
-          {
-            color: "#563d7c",
-            name: "CSS",
-            percent: 4.52,
-          },
-          {
-            color: "#16ce40",
-            name: "Git Config",
-            percent: 0.02,
-          },
-          {
-            color: "#1f9aef",
-            name: "Other",
-            percent: 0.01,
-          })
-        ];
-      }
-    </script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </body>
