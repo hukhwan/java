@@ -328,6 +328,26 @@ select {
   transition: opacity 250ms ease-in-out;
   right: 25px;
 }
+
+.plusNewLocal {
+  position: absolute;
+  bottom: -100px;
+  left: -150px;
+  background-color: rgba(212, 212, 212, 0.534);
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+.plusNewLocal input {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+}
+
+.localBox .selection i:last-child:hover > .plusNewLocal {
+  opacity: 100%;
+}
+
 .localBox .selection i {
   margin-left: 10px;
   color: rgb(124, 124, 124);
@@ -343,51 +363,51 @@ select {
   color: #0c0b0b;
 }
 
-.homeData1 .preview,
+.preview,
 .homeData1 .banner {
   align-items: center;
 }
 
-.homeData1 .preview ul {
+.preview ul {
   height: 400px;
   overflow: auto;
   margin-bottom: 50px;
 }
 
-.homeData1 .preview ul::-webkit-scrollbar {
+.preview ul::-webkit-scrollbar {
   width: 15px;
 }
 
-.homeData1 .preview ul::-webkit-scrollbar-thumb {
+.preview ul::-webkit-scrollbar-thumb {
   background-color: #2f35425e;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
-.homeData1 .preview ul::-webkit-scrollbar-thumb:hover {
+.preview ul::-webkit-scrollbar-thumb:hover {
   background-color: #2f3542b6;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
 
-.homeData1 .preview ul::-webkit-scrollbar-track {
+.preview ul::-webkit-scrollbar-track {
   background-color: rgba(128, 128, 128, 0.089);
   border-radius: 10px;
 }
-.homeData1 .preview ul::-webkit-scrollbar-track:hover {
+.preview ul::-webkit-scrollbar-track:hover {
   background-color: rgba(128, 128, 128, 0.26);
   border-radius: 10px;
 }
 
-.homeData1 .preview > h2 {
+.preview > h2 {
   font-size: 24px;
   line-height: 38.26px;
   font-weight: 700;
   color: #0c0b0b;
 }
 
-.homeData1 .preview > ol li {
+.preview > ol li {
   font-size: 16px;
   line-height: 25.5px;
   font-weight: 700;
@@ -395,14 +415,14 @@ select {
   opacity: 0.3;
   cursor: default;
 }
-.homeData1 .preview > ol li:hover {
+.preview > ol li:hover {
   opacity: 0.8;
 }
 
-.homeData1 .preview > ol > .open {
+.preview > ol > .open {
   opacity: 1;
 }
-.homeData1 .preview > ol > .open:hover {
+.preview > ol > .open:hover {
   opacity: 1;
 }
 
@@ -436,7 +456,7 @@ select {
 
 /*프리뷰*/
 
-.homeData1 .preview .doList {
+.preview .doList {
   max-width: 750px;
   position: relative;
   margin: 20px;
@@ -451,11 +471,11 @@ select {
   padding: 0 60px 0 22px;
 }
 
-.homeData1 .preview .doList > div {
+.preview .doList > div {
   margin: 0 40px;
 }
 
-.homeData1 .preview .doList i {
+.preview .doList i {
   display: block;
   padding: 25px 1px 25px 0;
   cursor: default;
@@ -463,28 +483,28 @@ select {
   margin-right: 20px;
 }
 
-.homeData1 .preview .doList i:hover {
+.preview .doList i:hover {
   font-size: 16px;
 }
 
-.homeData1 .preview .doList > i:hover {
+.preview .doList > i:hover {
   font-size: 18px;
   margin-right: 18px;
 }
-.homeData1 .preview .doList > i:active ~ p {
+.preview .doList > i:active ~ p {
   filter: brightness(0.7);
 }
 
-.homeData1 .preview ol li {
+.preview ol li {
   padding: 20px;
   padding-bottom: 10px;
   margin-right: 10px;
 }
-.homeData1 .preview ol li:first-child {
+.preview ol li:first-child {
   padding-left: 0;
 }
 
-.homeData1 .preview .doList > .fas {
+.preview .doList > .fas {
   margin: 19px 0;
   font-weight: 900;
   font-size: 20px;
@@ -493,19 +513,19 @@ select {
 }
 
 /*투두리스트 종류*/
-.homeData1 .preview .doList > .fa-briefcase {
+.preview .doList > .fa-briefcase {
   background-color: #82f5cd;
   border: #5e8378 solid 3px;
   color: #374e47;
 }
 
-.homeData1 .preview .doList > .fa-book {
+.preview .doList > .fa-book {
   background-color: #f8dc7e;
   border: #97916c solid 3px;
   color: #4e4b37;
 }
 
-.homeData1 .preview .doList > .fa-user {
+.preview .doList > .fa-user {
   background-color: #a5b3fc;
   border: #97916c solid 3px;
   color: #4e4b37;
@@ -513,11 +533,11 @@ select {
 
 /*투두리스트 종류 end*/
 
-.homeData1 .preview .doList .liH {
+.preview .doList .liH {
   width: 250px;
 }
 
-.homeData1 .preview .doList .liH > p {
+.preview .doList .liH > p {
   font-family: "Roboto";
   font-size: 13px;
   font-weight: 400;
@@ -525,7 +545,7 @@ select {
   letter-spacing: 0;
 }
 
-.homeData1 .preview .doList .time {
+.preview .doList .time {
   margin-right: 20px;
   text-align: center;
   font-family: "Roboto";
@@ -536,7 +556,7 @@ select {
   width: 110px;
 }
 
-.homeData1 .preview .doList button {
+.preview .doList button {
   position: absolute;
   right: 0;
   height: 100%;
@@ -548,16 +568,16 @@ select {
   opacity: 0.8;
   border-radius: 0 8px 8px 0;
 }
-.homeData1 .preview .doList button i {
+.preview .doList button i {
   margin: 0;
   font-size: 20px;
   color: white;
 }
-.homeData1 .preview .doList button:hover {
+.preview .doList button:hover {
   filter: brightness(2);
 }
 
-.homeData1 .preview .doList button:active {
+.preview .doList button:active {
   filter: brightness(0.5);
 }
 
@@ -582,6 +602,267 @@ select {
   width: 30px;
   height: 10px;
 } */
+
+/*메모 open*/
+.homeData1 .preview .memo {
+  height: 100%;
+  overflow: unset;
+  padding-bottom: 200px;
+}
+
+.homeData1 .preview .memoLi {
+  overflow: hidden;
+  max-width: 750px;
+  position: relative;
+  margin: 20px;
+  margin-left: 0;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.479);
+  cursor: unset;
+  box-shadow: 0 0 30px #cccccc;
+  padding: 0 22px;
+}
+
+.homeData1 .preview .memoLi .memoLiContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeData1 .preview .memoLi .memoLiContent i {
+  display: block;
+  padding: 25px 1px 25px 0;
+  cursor: default;
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+.homeData1 .preview .memoLi .memoLiContent > .fas {
+  margin: 19px 0;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.memoLi .memoExplain {
+  max-height: 0;
+  transition: max-height 250ms ease-out;
+}
+
+/*투두리스트 종류*/
+.homeData1 .preview .memoLi .memoLiContent > .fa-briefcase {
+  background-color: #82f5cd;
+  border: #5e8378 solid 3px;
+  color: #374e47;
+}
+
+.homeData1 .preview .memoLi .memoLiContent > .fa-book {
+  background-color: #f8dc7e;
+  border: #97916c solid 3px;
+  color: #4e4b37;
+}
+
+.homeData1 .preview .memoLi .memoLiContent > .fa-user {
+  background-color: #a5b3fc;
+  border: #97916c solid 3px;
+  color: #4e4b37;
+}
+
+/*투두리스트 종류 end*/
+
+.homeData1 .preview .memoLi h2 {
+  width: 300px;
+  margin: 0 40px;
+}
+
+.homeData1 .preview .memoLi .liH > p {
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.23px;
+  letter-spacing: 0;
+}
+
+.homeData1 .preview .memoLi strong {
+  margin-right: 20px;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 15.23px;
+  letter-spacing: 0;
+  font-weight: 500;
+  width: 150px;
+}
+
+/*두번째 란*/
+
+.logAndSearch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logAndSearch .searchBox {
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 12px 15px 8px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px #c4c4c4;
+}
+
+.logAndSearch select {
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #1d1d1d;
+  padding: 3px 7px;
+  color: white;
+}
+
+.logAndSearch select:hover {
+  color: #1d1d1d;
+  background-color: white;
+}
+
+.logAndSearch input {
+  padding: 5px 0 5px 10px;
+}
+
+.logAndSearch .submit {
+  cursor: default;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.logAndSearch > i {
+  font-size: 25px;
+  margin: 0 15px;
+}
+.logAndSearch .fa-bell {
+  margin-left: 50px;
+}
+
+/*로그인*/
+
+.logBox {
+  position: relative;
+}
+
+.log {
+  max-height: 0;
+  position: absolute;
+  right: -20px;
+  top: 25px;
+  width: 70px;
+  text-align: center;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px #9e9e9e;
+}
+
+.log p {
+  padding: 7px 5px;
+  cursor: default;
+}
+
+.log p:first-child {
+  padding-top: 15px;
+}
+.log p:last-child {
+  padding-top: 10px;
+}
+
+.log p:hover {
+  background-color: #79797934;
+}
+
+/*달력,시간*/
+.homeData2 .timeStamp {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.homeData2 .timeStamp h3 {
+  color: gray;
+  margin-bottom: 10px;
+}
+.homeData2 .timeStamp h3 em {
+  color: #0c0b0b;
+}
+
+.homeData2 .timeStamp article {
+  width: 35%;
+  min-width: 230px;
+  padding: 20px 20px 0;
+  box-shadow: 0 0 30px #cccccc;
+  border-radius: 14px;
+}
+
+.homeData2 .timeStamp article:first-child {
+  margin-right: 24px;
+}
+
+.timeStamp .myCalendar > div {
+  display: flex;
+  justify-content: center;
+}
+
+.timeStamp .myCalendar p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  padding: 5px;
+  color: black;
+}
+
+/*글 개수*/
+.timeStamp .myWrite {
+  display: flex;
+  justify-content: center;
+}
+.timeStamp .myWrite p {
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+.timeStamp .myWrite p em {
+  font-size: 52px;
+}
+
+/*프리뷰 차트*/
+.stackChart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px #949494;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #818181;
+}
+
+.optContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 110px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px #949494;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #818181;
+}
+
+/*easy option*/
 
 /*모바일*/
 @media screen and (max-height: 920px) {
