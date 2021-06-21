@@ -114,11 +114,6 @@ body {
 
 /*테마*/
 .canvas {
-  background: url("/Hnote/src/main/webapp/source/canvas.jpg");
-  background-size: 80% 130%;
-}
-
-.defaultTheme {
   /* background-color: white; */
   background-color: white;
 }
@@ -139,6 +134,7 @@ nav {
   min-height: 843px;
   max-height: 1000px;
   /* background-color: #0c0b0b; */
+  background: url("/src/main/webapp/source/canvas_black.jpg");
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
   background-size: 50% 50%;
   border-radius: 24px;
@@ -576,6 +572,7 @@ select {
   width: 30px;
   padding: 0;
   text-align: center;
+  background: url("/src/main/webapp/source/canvas_black.jpg");
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
   background-size: 50% 50%;
   opacity: 0.8;
@@ -916,4 +913,53 @@ select {
   .home {
     margin-left: 150px;
   }
+}
+
+/*로그인 창*/
+
+.logindata {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.logindata h3 {
+  font-size: 25px;
+  margin: 30px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.logindata > div {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.377);
+  border-radius: 12px;
+  box-shadow: 0px 5px 50px #949494;
+  margin-left: 4px;
+  margin: 30px;
+}
+
+.logindata input,
+.logindata label {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.logindata > input {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 25px;
+  background-color: rgba(20, 20, 20, 0.507);
+  color: #dadada;
+  border-radius: 12px;
+  margin-top: 10px;
+  border: rgba(92, 92, 92, 0.507) solid 3px;
+}
+
+.logindata label {
+  color: #444444;
 }
