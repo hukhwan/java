@@ -206,6 +206,75 @@ function YnCheck(obj) {
   }
 }
 
+<<<<<<< HEAD
+=======
+//var checkYn = "${data.YnCheck}";
+//if (checkYn == "Y") {
+//  $("#task1").prop("checked", true);
+//} else {
+//  $("#task1").prop("checked", false);
+//}
+
+// var checkYn2 = "${data.YnCheck2}";
+// if (checkYn2 == "Y") {
+//   $("#modify").prop("checked", true);
+// } else {
+//   $("#modify").prop("checked", false);
+// }
+
+//label을 클릭시 해당input의 value = label classname
+
+var createBtn1 = document.querySelector(".difficulty #dif_default");
+createBtn1.addEventListener("click", updateBtn1only);
+
+var createBtn2 = document.querySelector(".difficulty #dif_low");
+createBtn2.addEventListener("click", updateBtn);
+
+var createBtn3 = document.querySelector(".difficulty #dif_normal");
+createBtn3.addEventListener("click", updateBtn);
+
+var createBtn4 = document.querySelector(".difficulty #dif_high");
+createBtn4.addEventListener("click", updateBtn);
+
+var createBtn5 = document.querySelector(".difficulty #dif_clear");
+createBtn5.addEventListener("click", updateBtn);
+
+function updateBtn() {
+  if (this.getAttribute("name") == "") {
+    a();
+    this.setAttribute("name", "dashDifficulty");
+    this.style.border = "gray solid 3px";
+  } else {
+    this.setAttribute("name", "");
+    this.style.border = "white solid 3px";
+  }
+}
+
+function updateBtn1only() {
+  if (this.getAttribute("name") == "") {
+    a();
+    this.setAttribute("name", "dashDifficulty");
+    this.style.border = "gray solid 3px";
+  } else {
+    this.setAttribute("name", "");
+    this.style.border = "#c7c7c7 solid 3px";
+  }
+}
+
+function a() {
+  createBtn1.setAttribute("name", "");
+  createBtn1.style.border = "#c7c7c7 solid 3px";
+  createBtn2.setAttribute("name", "");
+  createBtn2.style.border = "white solid 3px";
+  createBtn3.setAttribute("name", "");
+  createBtn3.style.border = "white solid 3px";
+  createBtn4.setAttribute("name", "");
+  createBtn4.style.border = "white solid 3px";
+  createBtn5.setAttribute("name", "");
+  createBtn5.style.border = "white solid 3px";
+}
+
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 //카테고리설정
 var createCate1 = document.querySelector(".categori #works");
 createCate1.addEventListener("click", updateCate);

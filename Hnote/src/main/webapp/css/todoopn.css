@@ -231,7 +231,11 @@ h4 {
 .detailBox {
   display: flex;
   width: 100%;
+<<<<<<< HEAD
   margin-bottom: 60px;
+=======
+  margin-bottom: 30px;
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 }
 
 .todoDetail {

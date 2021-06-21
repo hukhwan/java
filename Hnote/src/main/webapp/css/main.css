@@ -114,7 +114,11 @@ body {
 
 /*테마*/
 .canvas {
+<<<<<<< HEAD
   background: url("/src/main/webapp/source/canvas.jpg");
+=======
+  background: url("/Hnote/src/main/webapp/source/canvas.jpg");
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 80% 130%;
 }
 
@@ -139,7 +143,11 @@ nav {
   min-height: 843px;
   max-height: 1000px;
   /* background-color: #0c0b0b; */
+<<<<<<< HEAD
   background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 50% 50%;
   border-radius: 24px;
   box-shadow: 20px 5px 50px #949494;
@@ -576,7 +584,11 @@ select {
   width: 30px;
   padding: 0;
   text-align: center;
+<<<<<<< HEAD
   background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 50% 50%;
   opacity: 0.8;
   border-radius: 0 8px 8px 0;
@@ -917,6 +929,7 @@ select {
     margin-left: 150px;
   }
 }
+<<<<<<< HEAD
 
 /*로그인 창*/
 
@@ -966,3 +979,5 @@ select {
 .logindata label {
   color: #444444;
 }
+=======
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
