@@ -83,7 +83,7 @@ body {
 
 .DEFAULT {
   border: #c7c7c7 solid 3px;
-  background-color: #f0f1f7;
+  background-color: #f0f1f7b2;
   color: #0c0b0b;
 }
 .DEFAULT::before {
@@ -92,7 +92,7 @@ body {
 
 .HIGH {
   border: white solid 3px;
-  background-color: #f12b2c;
+  background-color: #f12b2cb2;
 }
 .HIGH::before {
   content: "HIGH";
@@ -100,7 +100,7 @@ body {
 
 .CLEAR {
   border: white solid 3px;
-  background-color: rgb(0, 140, 255);
+  background-color: rgba(0, 140, 255, 0.747);
 }
 .CLEAR::before {
   content: "CLEAR";
@@ -114,11 +114,7 @@ body {
 
 /*테마*/
 .canvas {
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas.jpg");
-=======
   background: url("/Hnote/src/main/webapp/source/canvas.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 80% 130%;
 }
 
@@ -143,11 +139,7 @@ nav {
   min-height: 843px;
   max-height: 1000px;
   /* background-color: #0c0b0b; */
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas_black.jpg");
-=======
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 50% 50%;
   border-radius: 24px;
   box-shadow: 20px 5px 50px #949494;
@@ -584,17 +576,10 @@ select {
   width: 30px;
   padding: 0;
   text-align: center;
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas_black.jpg");
-=======
-  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
-  background-size: 50% 50%;
   opacity: 0.8;
-  border-radius: 0 8px 8px 0;
 }
+
 .preview .doList button i {
-  margin: 0;
   font-size: 20px;
   color: white;
 }
@@ -929,10 +914,8 @@ select {
     margin-left: 150px;
   }
 }
-<<<<<<< HEAD
 
 /*로그인 창*/
-
 .logindata {
   position: absolute;
   left: 50%;
@@ -979,5 +962,85 @@ select {
 .logindata label {
   color: #444444;
 }
-=======
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
+
+/*회원가입*/
+.joindata {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.joindata h3 {
+  font-size: 18px;
+  margin: 18px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.joindata > div {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.377);
+  border-radius: 12px;
+  box-shadow: 0px 5px 50px #949494;
+  margin-left: 4px;
+  margin: 20px;
+}
+
+.joindata input,
+.joindata label {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.joindata > input {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 15px;
+  color: #e0e0e0;
+  border-radius: 12px;
+  margin-top: 10px;
+  background-color: #1f1f1f8e;
+  border: rgba(92, 92, 92, 0.507) solid 3px;
+}
+
+.joindata label {
+  color: #444444;
+}
+
+.joindata .radio {
+  text-align: center;
+}
+.joindata .radio > label {
+  font-family: "Roboto";
+  font-weight: 900;
+  padding: 10px 20px;
+  position: relative;
+  color: rgb(100, 100, 100);
+}
+.joindata .radio > label:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.joindata .radio > label:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.2); /* IE */
+
+  -moz-transform: scale(1.2); /* FF */
+
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+
+  -o-transform: scale(1.2); /* Opera */
+
+  padding: 5px;
+}
+
+.joindata .radio > label input {
+  appearance: auto;
+}

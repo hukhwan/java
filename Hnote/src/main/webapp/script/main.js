@@ -206,8 +206,6 @@ function YnCheck(obj) {
   }
 }
 
-<<<<<<< HEAD
-=======
 //var checkYn = "${data.YnCheck}";
 //if (checkYn == "Y") {
 //  $("#task1").prop("checked", true);
@@ -274,7 +272,6 @@ function a() {
   createBtn5.style.border = "white solid 3px";
 }
 
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 //카테고리설정
 var createCate1 = document.querySelector(".categori #works");
 createCate1.addEventListener("click", updateCate);
