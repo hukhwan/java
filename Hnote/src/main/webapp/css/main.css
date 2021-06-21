@@ -114,11 +114,20 @@ body {
 
 /*테마*/
 .canvas {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  background: url("/src/main/webapp/source/canvas.jpg");
+=======
+>>>>>>> 14f187e884028a21336fd295248d5ffe16d3047c
   background: url("/Hnote/src/main/webapp/source/canvas.jpg");
   background-size: 80% 130%;
 }
 
 .defaultTheme {
+>>>>>>> 783cc074ed89bc91e1af92af1949b56a564cee1e
   /* background-color: white; */
   background-color: white;
 }
@@ -139,6 +148,16 @@ nav {
   min-height: 843px;
   max-height: 1000px;
   /* background-color: #0c0b0b; */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+<<<<<<< HEAD
+  background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+>>>>>>> 783cc074ed89bc91e1af92af1949b56a564cee1e
+>>>>>>> 14f187e884028a21336fd295248d5ffe16d3047c
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
   background-size: 50% 50%;
   border-radius: 24px;
@@ -576,6 +595,19 @@ select {
   width: 30px;
   padding: 0;
   text-align: center;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+<<<<<<< HEAD
+  background: url("/src/main/webapp/source/canvas_black.jpg");
+=======
+>>>>>>> 783cc074ed89bc91e1af92af1949b56a564cee1e
+  background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
+  background-size: 50% 50%;
+>>>>>>> 14f187e884028a21336fd295248d5ffe16d3047c
   opacity: 0.8;
 }
 
@@ -914,6 +946,13 @@ select {
     margin-left: 150px;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 783cc074ed89bc91e1af92af1949b56a564cee1e
+>>>>>>> 14f187e884028a21336fd295248d5ffe16d3047c
 
 /*로그인 창*/
 .logindata {
@@ -962,6 +1001,7 @@ select {
 .logindata label {
   color: #444444;
 }
+<<<<<<< HEAD
 
 /*회원가입*/
 .joindata {
@@ -1044,3 +1084,10 @@ input[type="radio"] {
 .joindata .radio > label input {
   appearance: auto;
 }
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
+>>>>>>> 783cc074ed89bc91e1af92af1949b56a564cee1e
+>>>>>>> 14f187e884028a21336fd295248d5ffe16d3047c
