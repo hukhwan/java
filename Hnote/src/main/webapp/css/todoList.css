@@ -128,11 +128,7 @@ body {
 
 /*테마*/
 .canvas {
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas.jpg");
-=======
   background: url("/Hnote/src/main/webapp/source/canvas.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 80% 130%;
 }
 
@@ -157,11 +153,7 @@ nav {
   min-height: 843px;
   max-height: 1000px;
   /* background-color: #0c0b0b; */
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas_black.jpg");
-=======
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 50% 50%;
   border-radius: 24px;
   box-shadow: 20px 5px 50px #949494;
@@ -550,19 +542,36 @@ select {
 }
 
 /*투두리스트 종류*/
-.preview .doList > .fa-briefcase {
+.preview .doList > .Works {
+  background: url("./briefcase-solid.svg") no-repeat;
+  background-size: 70% 70%;
+  background-position: 50% 40%;
   background-color: #82f5cd;
+  width: 40px;
+  height: 40px;
   border: #5e8378 solid 3px;
   color: #374e47;
 }
 
-.preview .doList > .fa-book {
+.preview .doList > .Study {
+  background: url("./book-solid.svg") no-repeat;
+  background-size: 70% 70%;
+  background-position: 45% 50%;
+  background-color: #82f5cd94;
+  width: 40px;
+  height: 40px;
   background-color: #f8dc7e;
   border: #97916c solid 3px;
   color: #4e4b37;
 }
 
-.preview .doList > .fa-user {
+.preview .doList > .Private {
+  background: url("./user-solid.svg") no-repeat;
+  background-size: 70% 70%;
+  background-position: 45% 50%;
+  background-color: #82f5cd94;
+  width: 40px;
+  height: 40px;
   background-color: #a5b3fc;
   border: #97916c solid 3px;
   color: #4e4b37;
@@ -600,11 +609,7 @@ select {
   width: 30px;
   padding: 0;
   text-align: center;
-<<<<<<< HEAD
-  background: url("/src/main/webapp/source/canvas_black.jpg");
-=======
   background: url("/Hnote/src/main/webapp/source/canvas_black.jpg");
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
   background-size: 50% 50%;
   opacity: 0.8;
   border-radius: 0 8px 8px 0;
@@ -741,11 +746,7 @@ select {
 .logAndSearch {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  margin-bottom: 50px;
-=======
   margin-bottom: 30px;
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 }
 
 .logAndSearch .searchBox {
@@ -857,11 +858,7 @@ select {
 }
 
 .homeData2 .timeStamp .myCalendar {
-<<<<<<< HEAD
-  padding-bottom: 10px;
-=======
   padding-bottom: 20px;
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 }
 
 .timeStamp .myCalendar > div {
@@ -931,11 +928,6 @@ select {
   box-shadow: 0 0 30px #7a7a7a;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 9f9b9ed9258dd833e6cdb3637acaf822a311a1ba
 /*모바일*/
 @media screen and (max-height: 920px) {
   nav {

@@ -284,7 +284,7 @@ createCate3.addEventListener("click", updateCate);
 
 function updateCate() {
   if (this.getAttribute("name") == "") {
-    a();
+    aa();
     this.setAttribute("name", "categori");
     this.style.border = "gray solid 3px";
   } else {
@@ -293,7 +293,7 @@ function updateCate() {
   }
 }
 
-function a() {
+function aa() {
   createCate1.setAttribute("name", "");
   createCate1.style.border = "#c7c7c7 solid 3px";
   createCate2.setAttribute("name", "");
@@ -301,3 +301,16 @@ function a() {
   createCate3.setAttribute("name", "");
   createCate3.style.border = "white solid 3px";
 }
+
+// var categoriSelector = document.querySelector("#categoriSelector");
+// categoriSelector.addEventListener("load", selectCategori);
+
+// function selectCategori() {
+//   if (this.getAttribute("value") == "Works") {
+//     this.nextElementSibling.classList.add("fas fa-briefcase");
+//   } else if (this.getAttribute("value") == "Study") {
+//     this.nextElementSibling.classList.add("fas fa-user");
+//   } else if (this.getAttribute("value") == "Private") {
+//     this.nextElementSibling.classList.add("fas fa-book");
+//   }
+// }
